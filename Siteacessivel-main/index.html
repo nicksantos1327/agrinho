@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feira Digital do Produtor Rural</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EMA - Feira Digital</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Produtores</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Seção de Cards -->
+    <section class="principais">
+      <div class="card">
+        <img src="queijo.jfif" alt="Queijo Artesanal">
+        <p>Queijo Artesanal</p>
+        <button onclick="showSection('queijo')" aria-label="Ver detalhes do Queijo Artesanal">Ver Produto</button>
+      </div>
+      <div class="card">
+        <img src="mel.jfif" alt="Mel Orgânico">
+        <p>Mel Orgânico</p>
+        <button onclick="showSection('mel')" aria-label="Ver detalhes do Mel Orgânico">Ver Produto</button>
+      </div>
+      <div class="card">
+        <img src="maria.avif" alt="Produtora Maria da Silva">
+        <p>Maria da Silva</p>
+        <button onclick="showSection('historiaMaria')" aria-label="Ver história de Maria da Silva">Ver História</button>
+      </div>
+      <div class="card">
+        <img src="joana.jfif" alt="Produtora Joana Oliveira">
+        <p>Joana Oliveira</p>
+        <button onclick="showSection('historiaJoana')" aria-label="Ver história de Joana Oliveira">Ver História</button>
+      </div>
+    </section>
+
+    <!-- Seção de Apresentação -->
+    <section class="apresentacao">
+      <h2>Conheça produtores rurais incríveis e encomende virtualmente seus produtos naturais direto do campo.</h2>
+      <button onclick="showSection('destaques')" aria-label="Explorar os destaques">Explorar</button>
+    </section>
+
+    <!-- Seção de Destaques -->
+    <section id="destaques" class="destaques hidden">
+      <h3>Destaques</h3>
+      <div class="galeria">
+        <div class="produto">
+          <img src="queijo.jfif" alt="Queijo Artesanal">
+          <p>Queijo Artesanal</p>
+        </div>
+        <div class="produto">
+          <img src="mel.jfif" alt="Mel Orgânico">
+          <p>Mel Orgânico</p>
+        </div>
+        <div class="produto">
+          <img src="laranja.webp" alt="Laranja">
+          <p>Laranja</p>
+        </div>
+        <div class="produtor">
+          <img src="joao.jpg" alt="Produtor João Silva">
+          <p>João Silva</p>
+        </div>
+        <div class="produtor">
+          <img src="jose.png" alt="Produtor José Antônio">
+          <p>José Antônio</p>
+        </div>
+        <div class="produtor">
+          <img src="paulo.jpg" alt="Produtor Paulo Oliveira">
+          <p>Paulo Oliveira</p>
+        </div>
+      </div>
+      <button onclick="hideSection()" aria-label="Voltar para o início">Voltar</button>
+    </section>
+
+    <!-- Seção: Queijo Artesanal -->
+    <section id="queijo" class="hidden">
+      <h2>Queijo Artesanal</h2>
+      <p>
+        O queijo artesanal é um alimento produzido de forma manual e tradicional, em pequena escala. Ele é feito a partir de leite fresco, com origem controlada, e seu sabor é influenciado pelas condições locais, como o pasto e o tipo de fermentação usada. A produção envolve ordenha higiênica, adição de coalho, corte da coalhada, moldagem manual, salga e maturação. Pode ter textura cremosa, firme ou curada, com sabor que varia de suave a intenso. É rico em proteínas, cálcio e gorduras saudáveis, e geralmente apresenta casca natural e aroma marcante. Simboliza a tradição e a cultura do campo.
+      </p>
+      <button onclick="hideSection()" aria-label="Voltar aos produtos">Voltar</button>
+    </section>
+
+    <!-- Seção: Mel Orgânico -->
+    <section id="mel" class="hidden">
+      <h2>Mel Orgânico</h2>
+      <p>
+        O mel orgânico é produzido por abelhas que se alimentam exclusivamente de flores cultivadas sem agrotóxicos ou fertilizantes químicos. Sua coleta é feita de maneira sustentável, respeitando o ciclo natural das colmeias e a biodiversidade local. Rico em antioxidantes, vitaminas e minerais, o mel orgânico se destaca por seu sabor mais puro e aroma floral. Ele passa por um processo mínimo de filtragem, mantendo enzimas e nutrientes naturais. Cada região dá ao mel uma identidade única, variando em cor, textura e intensidade de sabor. É um alimento energético, antibacteriano e símbolo de saúde e equilíbrio com a natureza.
+      </p>
+      <button onclick="hideSection()" aria-label="Voltar aos produtos">Voltar</button>
+    </section>
+
+    <!-- Seção: História Maria da Silva -->
+    <section id="historiaMaria" class="hidden">
+      <h2>História de Maria da Silva</h2>
+      <p>Maria da Silva nasceu em uma pequena comunidade rural no interior de Minas Gerais, onde o trabalho no campo sempre foi parte da sua vida. Desde cedo, ela aprendeu com seus pais sobre o cultivo da terra e o cuidado com os animais, mas foi na produção artesanal de queijo que encontrou sua verdadeira paixão.</p>
+      <p>Inspirada pelo sabor único dos queijos artesanais, Maria estudou gastronomia e voltou para sua terra natal com o sonho de criar seu próprio negócio. Com muito esforço, transformou parte da casa em uma queijaria, usando leite de vacas criadas em pasto natural.</p>
+      <p>Hoje, seu queijo é referência em qualidade e sabor. Maria é símbolo de empreendedorismo feminino no campo, respeitando a natureza e valorizando a produção artesanal.</p>
+      <button onclick="hideSection()" aria-label="Voltar aos produtores">Voltar</button>
+    </section>
+
+    <!-- Seção: História Joana Oliveira -->
+    <section id="historiaJoana" class="hidden">
+      <h2>História de Joana Oliveira</h2>
+      <p>Joana Oliveira cresceu no sertão da Bahia, em meio ao cultivo de abelhas e à extração de mel. Desde pequena, acompanhava os avós no manejo das colmeias e aprendeu a respeitar o tempo da natureza.</p>
+      <p>Formada em biologia, Joana uniu o conhecimento científico ao saber tradicional. Criou um apiário sustentável e fundou uma cooperativa com outras mulheres da região para produzir mel orgânico de alta qualidade.</p>
+      <p>Hoje, ela vende para todo o Brasil e inspira jovens produtoras rurais com sua história de inovação, união comunitária e amor pelo meio ambiente.</p>
+      <button onclick="hideSection()" aria-label="Voltar aos produtores">Voltar</button>
+    </section>
+  </main>
+
+  <script>
+    function showSection(id) {
+      const allSections = document.querySelectorAll("main > section");
+      allSections.forEach(section => section.classList.add("hidden"));
+      const target = document.getElementById(id);
+      if (target) {
+        target.classList.remove("hidden");
+      }
+      window.scrollTo(0, 0);
+    }
+
+    function hideSection() {
+      const allSections = document.querySelectorAll("main > section");
+      allSections.forEach(section => section.classList.add("hidden"));
+      document.querySelector(".principais").classList.remove("hidden");
+      document.querySelector(".apresentacao").classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
